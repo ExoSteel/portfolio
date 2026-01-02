@@ -4,7 +4,7 @@
   --text: #f0f0f0;
   --text2: #0f0f0f;
   --accent: linear-gradient(45deg, #fffdff, #646cff);
-  --accent2: linear-gradient(45deg, #000000, #775b00);
+  --accent2: linear-gradient(45deg, #f10028, #610054);
 }
 
 body {
@@ -38,11 +38,12 @@ main {
 }
 
 footer {
-  display: block;
+  display: flex;
   align-items: center;
   align-self: center;
-  height: 10%;
-  padding: 5% 0% 2% 0%;
+  justify-content: space-between;
+  padding: 2% 2% 0% 2%;
+  margin: auto;
   text-align: center;
 }
 
@@ -52,8 +53,8 @@ table {
   justify-content: left;
 }
 
-td {
-  width: 100px;
+td, tr {
+  width: 5%;
 }
 
 button {
@@ -75,7 +76,8 @@ button {
 }
 
 .solid {
-  height: 40vh;
+  margin: auto;
+  padding: 1%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,7 +86,7 @@ button {
 }
 
 .glass {
-  height: 40vh;
+  height: 10vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,7 +96,7 @@ button {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3vw;
   line-height: normal;
   margin: 0;
   background: var(--accent);
@@ -104,9 +106,12 @@ h1 {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.2vw;
   color: var(--text);
-  margin-top: 1rem;
+}
+
+li {
+  font-size: larger;
 }
 
 a { 
@@ -116,7 +121,7 @@ a {
 }
 
 .btn-ul {
-  position: absolute;
+  position: relative;
   display: block;
   bottom: 0;
   left: 0;
@@ -137,8 +142,9 @@ a {
 }
 
 img{
-  width: 500px;
-  height: 250px;
+  width: 35%;
+  height: 80%;
+  padding: 0% 5% 0% 5%;
   border-radius: 5px;
 }
 
@@ -146,22 +152,50 @@ img{
   display: flex;
   justify-content: left;
   align-items: center;
-  width: 2200px;
-  height:750px;
-  margin: 200px;
+  width: 75vw;
+  height: 20vw;
+  margin: 3vw 0 0 0;
   background-color: var(--bg2);
   border-radius: 50px;
 }
 
 h2 {
-  color: var(--accent2);
+  background: var(--accent2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  font-size: 1.5vw;
 }
 
 .desc {
   color: var(--text2);
+  font-size: 1vw;
 }
 
 .segment{
-  padding:0px 25px 10px 0px;
-  justify-content: left;
+  display: block;
+  text-align: left;
+}
+
+.contacts {
+  text-align: right;
+}
+
+h3 {
+  text-align: center;
+  padding: 0%;
+  font-size: 1.2vw;
+  margin: auto;
+}
+
+.ftr-p {
+  font-size: 1vw;
+  text-align: left;
+}
+
+.footnote {
+  padding: 0% 1% 1% 0%;
+  margin: auto;
+  font-size: 0.7vw;
+  text-align: right;
 }

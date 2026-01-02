@@ -11,12 +11,20 @@ tl.to("nav", {
   opacity: 1, duration: 0.5, y: 0, ease: "power2.out",
 });
 
-tl.from(".animate-text", {
+tl.from(".fade-up", {
   y: 80,
   opacity: 0,
   skewY: 7,
   duration: 0.2,
-  stagger: 0.2
+  stagger: 0,
+});
+
+tl.from(".fade-right", {
+  x: -80,
+  opacity: 0,
+  skewY: 7,
+  duration: 0.2,
+  stagger: 0,
 });
 
 try {
@@ -60,4 +68,25 @@ buttons.forEach((btn) => {
   });
 });
 
+const glow = document.querySelectorAll(".glow-up");
+
+glow.forEach((btn) => {
+  btn.addEventListener("mouseenter", () => {
+    gsap.to(btn, {
+      scale: 1.2,
+      color: "#646cff",
+      duration: 0.2,
+      ease: "power2.out",
+    });
+  });
+
+  btn.addEventListener("mouseleave", () => {
+    gsap.to(btn, {
+      scale: 1,
+      color: "#f0f0f0",
+      duration: 0.2,
+      ease: "power2.out",
+    });
+  });
+});
 

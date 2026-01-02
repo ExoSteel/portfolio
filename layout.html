@@ -9,17 +9,12 @@
 <body>
     <header>
 		<a href="/">
-		<h1>oh shall the great perish and fall</h1>
+		<h1>tora tora tora</h1>
 		</a>
 	</header>
 
 	<nav>
-		<a href="/sandbox.html">
-		<button class="hvr-btn">
-			<span class="btn-text">tasdasdasdasdest</span>
-			<span class="btn-ul"></span>
-		</button>
-		</a>
+		
 
 		<a href="/projects.html">
 		<button class="hvr-btn">
@@ -34,29 +29,58 @@
 			<span class="btn-ul"></span>
 		</button>
 		</a>
+		
+		<a href="/sandbox.html">
+		<button class="hvr-btn">
+			<span class="btn-text">testing</span>
+			<span class="btn-ul"></span>
+		</button>
+		</a>
 	</nav>
     
     {% block content %}
     {% endblock %}
 
     <footer>
+		
         <table>
             <tr>
-                <td><p>once</p></td>
-                <td><p>twice</p></td>
-                <td><p>trice</p></td>
-                <td><p>quadrice</p></td>
+				<th><h3>Content</h3></th>
             </tr>
             <tr>
-                <td><p>once2</p></td>
-                <td><p>twice2</p></td>
-                <td><p>trice2</p></td>
-                <td><p>quadrice2</p></td>
+                <td><a href="/"><p class="ftr-p glow-up">Home</p></a></td>
+            </tr>
+			<tr>
+                <td><a href="/projects.html"><p class="ftr-p glow-up">Projects</p></a></td>
+            </tr>
+			<tr>
+                <td><a href="/about.html"><p class="ftr-p glow-up">About</p></a></td>
+            </tr>
+			<tr>
+                <td><a href="/sandbox.html"><p class="ftr-p glow-up">Sandbox</p></a></td>
             </tr>
         </table>
-	
-	</footer>
 
+		<table>
+            <tr>
+				<th><h3>Contacts</h3></th>
+            </tr>
+            <tr>
+                <td><a><p class="ftr-p glow-up"><span style="font-weight: bold;">Email: </span>idontcare@sojust.dev</p></a></td>
+            </tr>
+			<tr>
+                <td><a><p class="ftr-p glow-up"><span style="font-weight: bold;">LinkedIn: </span>soon</p></a></td>
+            </tr>
+			<tr>
+                <td><p class="ftr-p glow-up">​</p></td>
+            </tr>
+			<tr>
+                <td><p class="ftr-p glow-up">​</p></td>
+            </tr>
+        </table>
+		
+	</footer>
+	<p class="footnote">powered by Vite & gsap</p>
 	<script type="module" src="/src/main.js"></script>
 </body>
 </html>
