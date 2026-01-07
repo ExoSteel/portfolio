@@ -171,10 +171,9 @@ a {
 }
 
 img{
-  width: 35%;
-  height: 80%;
+  width: calc(30rem + 10vw);
+  height: calc(50rem + 15vw);
   padding: 0% 5% 0% 5%;
-  border-radius: 5px;
 }
 
 .proj {
