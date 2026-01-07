@@ -1,10 +1,10 @@
 :root {
-  --bg: #0f0f0f;
-  --bg2: #fffdff;
-  --text: #f0f0f0;
-  --text2: #0f0f0f;
-  --accent: linear-gradient(45deg, #fffdff, #646cff);
-  --accent2: linear-gradient(45deg, #f10028, #610054);
+  --bg: #E6D4C8;
+  --bg2: #e7c8b5;
+  --text: #303146;
+  --text2: #895B52;
+  --accent: linear-gradient(45deg, #303146, #303146);
+  --accent2: linear-gradient(45deg, #895B52, #895B52);
 }
 
 body {
@@ -13,7 +13,7 @@ body {
   color: var(--text);
   font-family: 'Inter', sans-serif;
   overflow: scroll;
-  color: #888;
+  color: var(--text2);
 }
 
 header {
@@ -47,6 +47,11 @@ footer {
   text-align: center;
 }
 
+div {
+  padding: 0;
+  margin: 0;
+}
+
 table {
   display: flex;
   align-items: space;
@@ -54,7 +59,7 @@ table {
 }
 
 td, tr {
-  width: 5%;
+  width: calc(35rem + 2vw);
 }
 
 button {
@@ -88,15 +93,16 @@ button {
 .glass {
   height: 10vw;
   display: flex;
+  padding: 0 20vw;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #001113;
+  justify-content: end;
+  align-items: start;
+  text-align: left;
+  background-color: var(--bg2);
 }
 
 h1 {
-  font-size: 3vw;
+  font-size: calc(2rem + 0.8vw);
   line-height: normal;
   margin: 0;
   background: var(--accent);
@@ -105,9 +111,32 @@ h1 {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+h2 {
+  background: var(--accent2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  font-size: calc(1.2rem + 0.8vw);
+}
+
+h3 {
+  display: flex;
+  text-align: left;
+  align-items: start;
+  padding: 0%;
+  font-size: calc(1rem + 0.8vw);
+  margin: auto;
+}
+
 p {
-  font-size: 1.2vw;
+  font-size: calc(0.8rem + 0.4vw);
   color: var(--text);
+}
+
+.ftr-p {
+  font-size: calc(0.7rem + 0.4vw);
+  text-align: left;
+  margin: 2px;
 }
 
 li {
@@ -159,14 +188,6 @@ img{
   border-radius: 50px;
 }
 
-h2 {
-  background: var(--accent2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  font-size: 1.5vw;
-}
-
 .desc {
   color: var(--text2);
   font-size: 1vw;
@@ -181,21 +202,13 @@ h2 {
   text-align: right;
 }
 
-h3 {
-  text-align: center;
-  padding: 0%;
-  font-size: 1.2vw;
-  margin: auto;
-}
-
-.ftr-p {
-  font-size: 1vw;
-  text-align: left;
-}
-
 .footnote {
   padding: 0% 1% 1% 0%;
   margin: auto;
-  font-size: 0.7vw;
+  font-size: calc(0.6rem + 0.2vw);
   text-align: right;
+}
+
+.ftr-content {
+  padding: 0 1vw;
 }
