@@ -102,7 +102,7 @@ button {
 }
 
 h1 {
-  font-size: calc(2rem + 0.8vw);
+  font-size: calc(1.8rem + 0.8vw);
   line-height: normal;
   margin: 0;
   background: var(--accent);
@@ -116,7 +116,7 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  font-size: calc(1.2rem + 0.8vw);
+  font-size: calc(1rem + 0.8vw);
 }
 
 h3 {
@@ -124,17 +124,17 @@ h3 {
   text-align: left;
   align-items: start;
   padding: 0%;
-  font-size: calc(1rem + 0.8vw);
+  font-size: calc(0.8rem + 0.8vw);
   margin: auto;
 }
 
 p {
-  font-size: calc(0.8rem + 0.4vw);
+  font-size: calc(0.7rem + 0.4vw);
   color: var(--text);
 }
 
 .ftr-p {
-  font-size: calc(0.7rem + 0.4vw);
+  font-size: calc(0.5rem + 0.4vw);
   text-align: left;
   margin: 2px;
 }
