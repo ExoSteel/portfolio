@@ -22,6 +22,16 @@
   src: url('../fonts/staravenue.ttf');
 }
 
+@font-face {
+  font-family: 'Arcane Nine';
+  src: url('../fonts/Arcane\ Nine.otf');
+}
+
+@font-face {
+  font-family: 'Market Deco';
+  src: url('../fonts/Market_Deco.ttf');
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -29,6 +39,7 @@ body {
   font-family: 'Futura', 'Inter', sans-serif;
   font-weight: 100;
   overflow: scroll;
+  overflow-x: hidden;
   color: var(--text2);
 }
 
@@ -63,6 +74,10 @@ main {
   display: block;
 }
 
+a {
+  display: inline-block;
+}
+
 footer {
   display: flex;
   align-items: center;
@@ -70,7 +85,7 @@ footer {
   justify-content: space-between;
   padding: 2% 2% 0% 2%;
   margin: auto;
-  text-align: center;
+  text-align: left;
 }
 
 div {
@@ -86,6 +101,8 @@ table {
 
 td, tr {
   width: calc(35rem + 2vw);
+  align-content: center;
+  padding: 5px;
 }
 
 button {
@@ -152,7 +169,7 @@ h3 {
   text-align: left;
   align-items: start;
   padding: 0%;
-  font-size: calc(0.8rem + 0.8vw);
+  font-size: calc(1.2rem + 0.8vw);
   margin: auto;
 }
 
@@ -162,7 +179,7 @@ p {
 }
 
 .ftr-p {
-  font-size: calc(0.5rem + 0.4vw);
+  font-size: calc(0.8rem + 0.4vw);
   text-align: left;
   margin: 2px;
 }
@@ -268,4 +285,18 @@ img {
 
 .ftr-content {
   padding: 0 1vw;
+  
+}
+
+.infText {
+  font-size: 2000%; 
+  white-space: nowrap;
+  font-family:"Market Deco";
+}
+
+.grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+  gap: 10px;
 }

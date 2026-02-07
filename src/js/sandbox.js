@@ -100,20 +100,23 @@ colourfulBoxes.forEach((colourfulBox, i) => {
 
 const blocks = document.querySelectorAll(".block");
 
-console.log(blocks)
+gsap.set(blocks, {
+  x:10,
+})
 
 blocks.forEach((block) => {
   block.addEventListener("mouseenter", () => {
     gsap.to(block, 
-      {x:100, duration:1, ease:"power2.out"}
+      {x:1000, duration:2, ease:"power4.inOut"}
     );
   });
 
   block.addEventListener("mouseleave", () => {
     gsap.to(block, 
-      {x:0, duration:1, ease:"power2.out"}
+      {x:10, duration:2, ease:"power4.inOut"}
     );
   });
 
 });
+
 

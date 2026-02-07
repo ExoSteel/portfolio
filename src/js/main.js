@@ -83,3 +83,33 @@ glow.forEach((btn) => {
   });
 });
 
+const infText = document.querySelector(".infText")
+console.log(infText.getBoundingClientRect().width)
+
+gsap.to(infText, {
+  x:-infText.scrollWidth / 2,
+  duration: 20,
+
+  repeat:-1,
+  ease: "none",
+})
+
+fetch("/data/certificates.json")
+  .then(response => response.json())
+  .then(data => {
+    console.log(data["certificates"]);
+    let string = "";
+    for (var record in data["certificates"]){
+      console.log(record)
+      string += `
+        <div style="width:500px; height:500px;">
+          <p style="text-align: center; padding:0; margin:0;">${data["certificates"][record]["title"]}</p>
+          <p style="text-align: center; padding:0; margin:0;">${data["certificates"][record]["year"]}</p>
+          <img style="padding:0; margin:0; width: 100%; height:100%; object-fit:contain" src=${data["certificates"][record]["src"]}>
+        </div>  
+      `;
+    };
+    console.log(string);
+    document.querySelector(".grid").innerHTML = string;
+  }
+)
