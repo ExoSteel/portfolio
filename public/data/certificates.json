@@ -3,32 +3,32 @@
         {
         "title": "Cyberthon",
         "year": "2024",
-        "src": "/images/cyberthon2024.png"
+        "src": "/images/certs/cyberthon2024.png"
         },
         {
         "title": "Singapore Physics League",
         "year": "2023",
-        "src": "/images/sphl2023.png"
+        "src": "/images/certs/sphl2023.png"
         },
         {
         "title": "Singapore Physics League",
         "year": "2024",
-        "src": "/images/sphl2024.png"
+        "src": "/images/certs/sphl2024.png"
         },
         {
         "title": "Whitehacks Capture The Flag",
         "year": "2025",
-        "src": "/images/skwirel4cert.jpg"
+        "src": "/images/certs/skwirel4cert.jpg"
         },
         {
         "title": "BuildingBlocs June Conference",
         "year": "2024",
-        "src": "/images/bblocscompete.png"
+        "src": "/images/certs/bblocscompete.png"
         },
         {
         "title": "BuildingBlocs June Conference",
         "year": "2024",
-        "src": "/images/bblocscomplete.png"
+        "src": "/images/certs/bblocscomplete.png"
         }
     ]
 }
