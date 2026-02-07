@@ -102,10 +102,10 @@ fetch("/data/certificates.json")
     for (var record in data["certificates"]){
       console.log(record)
       string += `
-        <div style="width:500px; height:500px;">
+        <div style="width:calc(12rem + 18vw); height:calc(8rem + 18vw); justify-self:center;">
           <p style="text-align: center; padding:0; margin:0;">${data["certificates"][record]["title"]}</p>
           <p style="text-align: center; padding:0; margin:0;">${data["certificates"][record]["year"]}</p>
-          <img style="padding:0; margin:0; width: 100%; height:100%; object-fit:contain" src=${data["certificates"][record]["src"]}>
+          <img style="padding:0; margin:0; width: 80%; height:100%; object-fit:contain" src=${data["certificates"][record]["src"]}>
         </div>  
       `;
     };
