@@ -3,40 +3,63 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="icon" type="image/x-icon" href="./src/gdt.svg">
+	<link rel="stylesheet" href="./src/css/style.css">
+	<link rel="icon" type="image/x-icon" href="./src/images/logos/gdt.svg">
 	<title>My Portfolio</title>
 </head>
 
 <body>
-    <header>
-		<a href="/">
-		<h1>tora tora tora</h1>
-		</a>
-	</header>
 
 	<nav>
+		<div style="display: flex;">
+			<a href="/home.html">
+				<div class="stripe-container" style="display:flex; height: 250px;">
+					<div class="ball" style="margin: 1rem 0 0 0; padding: 0; background-color: #719AB7; border-radius: 100%; width: 50px; height: 50px;"></div>
+				</div>
+			</a>
+
+			<div class="nav-opt">
+				<a href="/projects.html">
+					<button class="hvr-btn">
+						<span class="btn-text">projects</span>
+						<span class="btn-ul"></span>
+					</button>
+				</a>
+
+				<a href="/about.html">
+				<button class="hvr-btn">
+					<span class="btn-text">about</span>
+					<span class="btn-ul"></span>
+				</button>
+				</a>
+
+				<a href="/gallery.html">
+				<button class="hvr-btn">
+					<span class="btn-text">gallery</span>
+					<span class="btn-ul"></span>
+				</button>
+				</a>
+				
+				<a href="/sandbox.html">
+				<button class="hvr-btn">
+					<span class="btn-text">testing</span>
+					<span class="btn-ul"></span>
+				</button>
+				</a>
+			</div>
+
+		</div>
+		
+		
 		
 
-		<a href="/projects.html">
-		<button class="hvr-btn">
-			<span class="btn-text">projects</span>
-			<span class="btn-ul"></span>
-		</button>
-		</a>
-
-		<a href="/about.html">
-		<button class="hvr-btn">
-			<span class="btn-text">about</span>
-			<span class="btn-ul"></span>
-		</button>
-		</a>
-		
-		<a href="/sandbox.html">
-		<button class="hvr-btn">
-			<span class="btn-text">testing</span>
-			<span class="btn-ul"></span>
-		</button>
-		</a>
+		<div style="justify-items: right; padding: 0px 10px 0px 0px; margin: 0;">
+			<div class="stripe-container" style="display: flex; height: 250px; justify-content: center;">
+        	<div class="stripe" style="background-color: #719AB7; height: 1px; width: 10px; transform-origin: center top;"></div>
+       		<div class="stripe" style="background-color: #DCB44B; height: 1px; width: 10px; transform-origin: center top;"></div>
+      		<div class="stripe" style="background-color: #C53F29; height: 1px; width: 10px; transform-origin: center top;"></div>
+        	<div class="stripe" style="background-color: #8A281E; height: 1px; width: 10px; transform-origin: center top;"></div>
+		</div>
 	</nav>
     
     {% block content %}
@@ -84,6 +107,6 @@
 		
 	</footer>
 	<p class="footnote">powered by Vite & gsap</p>
-	<script type="module" src="/src/main.js"></script>
+	<script type="module" src="./src/js/main.js"></script>
 </body>
 </html>
