@@ -1,34 +1,76 @@
 {
     "certificates": [
-        {
-        "title": "Cyberthon",
-        "year": "2024",
-        "src": "/images/certs/cyberthon2024.png"
+        {"year": 2025,
+         "content": [
+                {
+                "title": "Whitehacks Capture The Flag",
+                "year": "2025",
+                "src": "/images/certs/skwirel4cert.jpg"
+                }
+            ]
         },
-        {
-        "title": "Singapore Physics League",
-        "year": "2023",
-        "src": "/images/certs/sphl2023.png"
+
+        {"year": 2024,
+         "content": [
+                {
+                "title": "Cyberthon",
+                "year": "2024",
+                "src": "/images/certs/cyberthon2024.png"
+                },
+                {
+                "title": "Singapore Physics League",
+                "year": "2024",
+                "src": "/images/certs/sphl2024.png"
+                },
+                {
+                "title": "BuildingBlocs June Conference",
+                "year": "2024",
+                "src": "/images/certs/bblocscompete.png"
+                },
+                {
+                "title": "BuildingBlocs June Conference",
+                "year": "2024",
+                "src": "/images/certs/bblocscomplete.png"
+                }
+            ]
         },
-        {
-        "title": "Singapore Physics League",
-        "year": "2024",
-        "src": "/images/certs/sphl2024.png"
+
+        {"year": 2023,
+         "content": [
+                {
+                "title": "Singapore Physics League",
+                "year": "2023",
+                "src": "/images/certs/sphl2023.png"
+                }
+            ]
         },
-        {
-        "title": "Whitehacks Capture The Flag",
-        "year": "2025",
-        "src": "/images/certs/skwirel4cert.jpg"
+        
+        {"year": 2022,
+         "content": [
+            
+            ]
         },
-        {
-        "title": "BuildingBlocs June Conference",
-        "year": "2024",
-        "src": "/images/certs/bblocscompete.png"
+        
+        {"year": 2021,
+         "content": [
+            
+            ]
         },
-        {
-        "title": "BuildingBlocs June Conference",
-        "year": "2024",
-        "src": "/images/certs/bblocscomplete.png"
+        
+        {"year": 2020,
+         "content": [
+            
+            ]
+        },
+
+        {"year": 2019,
+         "content": [
+            
+            ]
         }
+        
+    ],
+    "_comment": [
+        
     ]
 }

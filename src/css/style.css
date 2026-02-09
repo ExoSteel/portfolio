@@ -1,8 +1,17 @@
 :root {
-  --bg: #E6D4C8;
+  /* brown retro */
+  /* --bg: #E6D4C8;
   --bg2: #e7c8b5;
   --text: #303146;
   --text2: #895B52;
+  --accent: linear-gradient(45deg, #303146, #303146);
+  --accent2: linear-gradient(45deg, #895B52, #895B52); */
+
+  /* blue mode */
+  --bg: #0f273b;
+  --bg2: #0d2030;
+  --text: #dedabe;
+  --text2: #FFFFFF;
   --accent: linear-gradient(45deg, #303146, #303146);
   --accent2: linear-gradient(45deg, #895B52, #895B52);
 }
@@ -121,7 +130,6 @@ button {
 
 .links, .logo{
   color: var(--text);
-  padding: auto;
 }
 
 .solid {
@@ -149,20 +157,22 @@ h1 {
   font-size: calc(1.8rem + 0.8vw);
   line-height: normal;
   margin: 0;
-  background: var(--accent);
+  color: var(--text2);
+  /* background: var(--accent);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
 }
 
 h2 {
-  background: var(--accent2);
+  color: var(--text2);
+  font-size: calc(1rem + 0.8vw);
+  /* background: var(--accent2);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  font-size: calc(1rem + 0.8vw);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
 }
 
 h3 {
@@ -208,7 +218,6 @@ a {
   color: var(--text);
 }
 
-
 .block {
   background-color: rgb(160, 0, 0);
   display: flex;
@@ -239,7 +248,6 @@ a {
   z-index: 1;
 }
 
-
 img {
   width: calc(30rem + 10vw);
   height: calc(50rem + 15vw);
@@ -247,8 +255,9 @@ img {
 }
 
 .proj > img {
-  width: calc(5rem + 10vw);
-  height: calc(5rem + 10vw);
+  width: calc(1rem + 12vw);
+  height: calc(1rem + 12vw);
+  border-radius: 12vw;
   padding: 0% 5% 0% 5%;
 }
 
@@ -258,9 +267,9 @@ img {
   align-items: center;
   width: 75vw;
   height: 20vw;
-  margin: 3vw 0 0 0;
+  margin: 2vw 0 0 0;
   background-color: var(--bg2);
-  border-radius: 50px;
+  border-radius: 25px;
 }
 
 .desc {
@@ -286,7 +295,6 @@ img {
 
 .ftr-content {
   padding: 0 1vw;
-  
 }
 
 .infText {
@@ -296,8 +304,8 @@ img {
 }
 
 .grid {
-  display: grid;
+  display: flex;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
   gap: 10px;
+  flex-wrap: wrap;
 }

@@ -64,7 +64,6 @@ loadingCircles.forEach((circle, i) => {
 
 const colourfulBoxes = document.querySelectorAll(".colourfulBox")
 
-
 colourfulBoxes.forEach((colourfulBox, i) => {
   let colourfulCircles = colourfulBox.querySelectorAll(".circle1")
 
@@ -97,7 +96,6 @@ colourfulBoxes.forEach((colourfulBox, i) => {
   })
 })
 
-
 const blocks = document.querySelectorAll(".block");
 
 gsap.set(blocks, {
@@ -118,5 +116,3 @@ blocks.forEach((block) => {
   });
 
 });
-
-

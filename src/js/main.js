@@ -2,12 +2,14 @@ import { gsap } from "gsap";
 
 let tl = gsap.timeline()
 
-tl.to("header", { 
-  opacity: 1, duration: 0.5, y: 0, ease: "power2.out",
+gsap.set(".header", {opacity:0});
+
+tl.to(".header", { 
+  opacity: 1, duration: 0.8, ease: "expo.in",
 });
 
 tl.to("nav", { 
-  opacity: 1, duration: 0.5, y: 0, ease: "power2.out",
+  opacity: 1, duration: 0.5, ease: "power2.out",
 });
 
 tl.from(".fade-right", {
@@ -38,12 +40,11 @@ tl2.to(stripes,
   {scaleY: 0, duration:1, ease:"power3.out", stagger:0.05, delay: 5}
 );
 
-
 const buttons = document.querySelectorAll(".hvr-btn");
 
 buttons.forEach((btn) => {
   var ul = btn.querySelector(".btn-ul");
-  console.log(btn, ul)
+  // console.log(btn, ul)
   btn.addEventListener("mouseenter", () => {
     gsap.to(ul, {
       scaleX: 1,
@@ -84,7 +85,7 @@ glow.forEach((btn) => {
 });
 
 const infText = document.querySelector(".infText")
-console.log(infText.getBoundingClientRect().width)
+// console.log(infText.getBoundingClientRect().width)
 
 gsap.to(infText, {
   x:-infText.scrollWidth / 2,
@@ -93,23 +94,3 @@ gsap.to(infText, {
   repeat:-1,
   ease: "none",
 })
-
-fetch("/data/certificates.json")
-  .then(response => response.json())
-  .then(data => {
-    console.log(data["certificates"]);
-    let string = "";
-    for (var record in data["certificates"]){
-      console.log(record)
-      string += `
-        <div style="width:calc(12rem + 18vw); height:calc(8rem + 18vw); justify-self:center;">
-          <p style="text-align: center; padding:0; margin:0;">${data["certificates"][record]["title"]}</p>
-          <p style="text-align: center; padding:0; margin:0;">${data["certificates"][record]["year"]}</p>
-          <img style="padding:0; margin:0; width: 80%; height:100%; object-fit:contain" src=${data["certificates"][record]["src"]}>
-        </div>  
-      `;
-    };
-    console.log(string);
-    document.querySelector(".grid").innerHTML = string;
-  }
-)
