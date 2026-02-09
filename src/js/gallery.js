@@ -33,7 +33,7 @@ async function insertCert(data){
         string += `
           <div style="justify-self:center;">
             
-            <img style="display:flex; justify-content:center; margin:0; width:${width}vw; height:${height}vh; object-fit:contain;" src=${content[record]["src"]}>
+            <img style="display:flex; justify-content:center; margin:0; width:${width}vw; height:${height}vh; object-fit:contain;" src=${content[record]["src"]} loading="lazy" decoding="async">
           </div> 
         `;
       }

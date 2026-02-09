@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 
-let tl = gsap.timeline()
+let tl = gsap.timeline();
 
 gsap.set(".header", {opacity:0});
 
@@ -30,7 +30,7 @@ tl.from(".fade-up", {
 
 const stripes = document.querySelectorAll(".stripe");
 
-let tl2 = gsap.timeline({repeat: -1})
+let tl2 = gsap.timeline({repeat: -1});
 
 tl2.to(stripes,
   {scaleY: 100, duration:1, ease:"power3.out", stagger:0.05,}
@@ -68,7 +68,7 @@ glow.forEach((btn) => {
   btn.addEventListener("mouseenter", () => {
     gsap.to(btn, {
       scale: 1.2,
-      color: "#895B52",
+      color: "#f0f0f0ff",
       duration: 0.2,
       ease: "power2.out",
     });
@@ -77,20 +77,22 @@ glow.forEach((btn) => {
   btn.addEventListener("mouseleave", () => {
     gsap.to(btn, {
       scale: 1,
-      color: "#303146",
+      color: "var(--text)",
       duration: 0.2,
       ease: "power2.out",
     });
   });
 });
 
-const infText = document.querySelector(".infText")
-// console.log(infText.getBoundingClientRect().width)
+window.addEventListener("load", () => {
+  const infText = document.querySelector(".infText");
+  // console.log(infText.getBoundingClientRect().width);
 
-gsap.to(infText, {
-  x:-infText.scrollWidth / 2,
-  duration: 20,
+  gsap.to(infText, {
+    x:-infText.scrollWidth / 2,
+    duration: 20,
 
-  repeat:-1,
-  ease: "none",
-})
+    repeat:-1,
+    ease: "none",
+  });
+});
