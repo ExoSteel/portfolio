@@ -186,7 +186,7 @@ button {
 }
 
 h1 {
-  font-size: calc(1.8rem + 0.8vw);
+  font-size: calc(1rem + 2vw);
   line-height: normal;
   margin: auto;
   color: var(--text2);
