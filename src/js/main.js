@@ -62,6 +62,26 @@ buttons.forEach((btn) => {
   });
 });
 
+const icons = document.querySelectorAll(".icon");
+
+icons.forEach((ic) => {
+  ic.addEventListener("mouseenter", () => {
+    gsap.to(ic, {
+      scale: 1.2,
+      duration: 0.2,
+      ease: "power2.out",
+    });
+  });
+
+  ic.addEventListener("mouseleave", () => {
+    gsap.to(ic, {
+      scale: 1,
+      duration: 0.2,
+      ease: "power2.out",
+    });
+  });
+});
+
 const glow = document.querySelectorAll(".glow-up");
 
 glow.forEach((btn) => {

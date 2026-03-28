@@ -1,4 +1,7 @@
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 // let t1 = gsap.timeline({})
 
@@ -116,3 +119,36 @@ blocks.forEach((block) => {
   });
 
 });
+
+const tl = gsap.timeline({ 
+  scrollTrigger: { 
+    trigger: ".timegraph",
+    start: "top 65%",
+    end: "100% 70%",
+    markers:true,
+    toggleActions: "play none none none", 
+    // pin: true,
+    scrub: true,
+  } 
+});
+
+const timesteps = document.querySelectorAll(".timestep");
+const timelines = document.querySelectorAll(".timeline");
+
+let alt = 1;
+
+for(let i = 0;i < Math.max(timesteps.length, timelines.length); i++){
+  console.log(i, alt);
+  tl.from(timesteps[i], {
+    scale: 0,
+    opacity:0,
+    ease: "back.inOut()" 
+  });
+
+  tl.from(timelines[i], { 
+    scaleY: 0, 
+    opacity:0,
+    transformOrigin: "top top", 
+    ease: "none"
+  });
+};

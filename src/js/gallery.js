@@ -1,3 +1,8 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const loadImage = (url) => {
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -31,7 +36,7 @@ async function insertCert(data){
         let height = (img.height / 50) % 200;
 
         string += `
-          <div style="justify-self:center;">
+          <div class="cert" style="justify-self:center;">
             
             <img style="display:flex; justify-content:center; margin:0; width:${width}vw; height:${height}vh; object-fit:contain;" src=${content[record]["src"]} loading="lazy" decoding="async">
           </div> 
@@ -55,6 +60,16 @@ async function insertCert(data){
 fetch("/data/certificates.json")
   .then(response => response.json())
   .then(data => {
-    insertCert(data["certificates"])
+    insertCert(data["certificates"]).then(
+      function() {
+        gsap.from(".cert", {
+          opacity: 0, y: 60, scale: 0.8,
+          rotation: () => gsap.utils.random(-5, 5),
+          stagger: 0.1,
+          ease: "back.out(1.4)"
+        });
+      }
+    )
   }
 )
+
